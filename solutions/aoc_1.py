@@ -7,10 +7,10 @@ import datetime as dt
 import re
 
 
-def one(_input):
+def one(lines):
     sum_1 = 0
     sums = []
-    for line in _input:
+    for line in lines:
         if line == "":
             sums.append(sum_1)
             sum_1 = 0
@@ -20,10 +20,10 @@ def one(_input):
     return (max(sums))
 
 
-def two(_input):
+def two(lines):
     sum_1 = 0
     sums = []
-    for line in _input:
+    for line in lines:
         if line == "":
             sums.append(sum_1)
             sum_1 = 0
