@@ -1,4 +1,4 @@
-from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7
+from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7, aoc_8
 
 
 def read_in(filename):
@@ -32,3 +32,7 @@ print('Problem 6 B: ' + str(aoc_6.two(lines)))
 lines = list(read_in('inputs/7.txt'))
 print('Problem 7 A: ' + str(aoc_7.one(lines)))
 print('Problem 7 B: ' + str(aoc_7.two(lines)))
+
+lines = list(read_in('inputs/8.txt'))
+print('Problem 8 A: ' + str(aoc_8.one(lines)))
+print('Problem 8 B: ' + str(aoc_8.two(lines)))
