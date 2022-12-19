@@ -82,7 +82,7 @@ def find_max_geodes_faster(bp, max_time):
         for c in now:
             for n in next_states(c, bp):
                 nxt = add_to_ts(nxt, n, max_time)
-        now = list(ts_to_s(nxt, t))
+        now = list(ts_to_s(nxt))
         nxt = init_ts()
     return max(s.geo for s in now)
 
@@ -106,29 +106,7 @@ def add_to_ts(ts, s: State, max_time):
         return (v, {s})
     return ts
 
-def ts_to_s(ts, time):
+def ts_to_s(ts):
     return ts[1]
 
 
-def init_time_state():
-    return set()
-
-def add_to_time_state(ts, s : State):
-    children = set()
-    keys = ['ore', 'clay', 'obs', 'geo', 'ore_robots', 'clay_robots', 'obs_robots', 'geo_robots']
-    for e in ts:
-        if s.ore >= e.ore and s.clay >= e.clay and s.obs >= e.obs and s.geo >= e.geo and s.ore_robots >= e.ore_robots and s.clay_robots >= e.clay_robots and s.obs_robots >= e.obs_robots and s.geo_robots >= e.geo_robots:
-            children.add(e)
-            continue
-
-        if s.ore <= e.ore and s.clay <= e.clay and s.obs <= e.obs and s.geo <= e.geo and s.ore_robots <= e.ore_robots and s.clay_robots <= e.clay_robots and s.obs_robots <= e.obs_robots and s.geo_robots <= e.geo_robots:
-            # we're dominated, skip it
-            return ts
-
-    for c in children:
-        ts.remove(c)
-    ts.add(s)
-    return ts
-
-def time_state_to_states(ts):
-    return ts
