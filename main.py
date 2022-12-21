@@ -1,5 +1,5 @@
 from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7, aoc_8, aoc_9, aoc_10, aoc_11, aoc_12, aoc_13, \
-    aoc_14, aoc_15, aoc_16, aoc_17, aoc_18, aoc_19, aoc_20
+    aoc_14, aoc_15, aoc_16, aoc_17, aoc_18, aoc_19, aoc_20, aoc_21
 
 
 def read_in(filename):
@@ -82,6 +82,10 @@ def read_in(filename):
 # print('Problem 19 A: ' + str(aoc_19.one(lines)))
 # print('Problem 19 B: ' + str(aoc_19.two(lines)))
 
-lines = list(read_in('inputs/20.txt'))
-print('Problem 20 A: ' + str(aoc_20.one(lines)))
-print('Problem 20 B: ' + str(aoc_20.two(lines)))
+# lines = list(read_in('inputs/20.txt'))
+# print('Problem 20 A: ' + str(aoc_20.one(lines)))
+# print('Problem 20 B: ' + str(aoc_20.two(lines)))
+
+lines = list(read_in('inputs/21.txt'))
+print('Problem 21 A: ' + str(aoc_21.one(lines)))
+print('Problem 21 B: ' + str(aoc_21.two(lines)))
