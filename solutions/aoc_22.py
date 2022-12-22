@@ -124,7 +124,6 @@ def print_grid(grid):
                 print(end=grid[(j+1, i+1)])
             else:
                 print(end=' ')
-    print()
 
 def step2(i, curr, grid, x_edges, y_edges):
     (col, row), facing = curr
